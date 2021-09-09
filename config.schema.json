@@ -1,5 +1,5 @@
 {
-  "pluginAlias": "ExampleHomebridgePlugin",
+  "pluginAlias": "BGHAirConditioner",
   "pluginType": "platform",
   "singular": true,
   "schema": {
