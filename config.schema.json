@@ -9,7 +9,17 @@
         "title": "Name",
         "type": "string",
         "required": true,
-        "default": "Example Dynamic Platform"
+        "default": "BGH Air Conditioner"
+      },
+      "username": {
+        "title": "Solidmation username",
+        "type": "string",
+        "required": true
+      },
+      "password": {
+        "title": "Solidmation password",
+        "type": "string",
+        "required": true
       }
     }
   }

@@ -26,13 +26,17 @@
   "keywords": [
     "homebridge-plugin"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "@types/node-fetch": "^3.0.3",
+    "node-fetch": "^2.6.2",
+    "solidmation": "^0.0.6"
+  },
   "devDependencies": {
     "@types/node": "^14.14.31",
     "@typescript-eslint/eslint-plugin": "^4.16.1",
     "@typescript-eslint/parser": "^4.16.1",
     "eslint": "^7.21.0",
-    "homebridge": "^1.3.1",
+    "homebridge": "^1.3.4",
     "nodemon": "^2.0.7",
     "rimraf": "^3.0.2",
     "ts-node": "^9.1.1",
