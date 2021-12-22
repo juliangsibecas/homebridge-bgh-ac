@@ -8,7 +8,7 @@ import {
 export const parseAccessoryCurrentState = (
   deviceMode: AirConditionerModes,
   currentTemp: number,
-  targetTemp: number
+  targetTemp: number,
 ): number => {
   if (deviceMode === AirConditionerModes.Off) {
     return AccessoryCurrentState.Inactive;
@@ -34,7 +34,7 @@ export const parseAccessoryCurrentState = (
 };
 
 export const parseAccessoryTargetState = (
-  deviceMode: AirConditionerModes
+  deviceMode: AirConditionerModes,
 ): number => {
   const dict = {
     [AirConditionerModes.Auto]: AccessoryTargetState.Auto,
@@ -46,7 +46,7 @@ export const parseAccessoryTargetState = (
 };
 
 export const parseAirConditionerMode = (
-  accessoryState: AccessoryTargetState
+  accessoryState: AccessoryTargetState,
 ) => {
   const dict = {
     [AccessoryTargetState.Auto]: AirConditionerModes.Auto,
@@ -58,7 +58,7 @@ export const parseAirConditionerMode = (
 };
 
 export const parseAccessoryFanSpeed = (
-  deviceFanMode: AirConditionerFanModes
+  deviceFanMode: AirConditionerFanModes,
 ) => {
   const dict = {
     [AirConditionerFanModes.Auto]: AccessoryFanSpeed.Mid,
@@ -72,7 +72,7 @@ export const parseAccessoryFanSpeed = (
 };
 
 export const parseAirConditionerFanMode = (
-  accessoryAccessoryFanSpeed: AccessoryFanSpeed
+  accessoryAccessoryFanSpeed: AccessoryFanSpeed,
 ) => {
   const dict = {
     [AccessoryFanSpeed.Slow]: AirConditionerFanModes.Slow,

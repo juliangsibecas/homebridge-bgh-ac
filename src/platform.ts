@@ -24,7 +24,7 @@ export class AirConditionerPlatform implements DynamicPlatformPlugin {
   constructor(
     public readonly log: Logger,
     public readonly config: PlatformConfig,
-    public readonly api: API
+    public readonly api: API,
   ) {
     this.solidmation = new Solidmation();
 
@@ -45,7 +45,7 @@ export class AirConditionerPlatform implements DynamicPlatformPlugin {
       const uuid = this.api.hap.uuid.generate(device.id.toString());
 
       const existingAccessory = this.accessories.find(
-        (accessory) => accessory.UUID === uuid
+        (accessory) => accessory.UUID === uuid,
       );
 
       if (existingAccessory) {

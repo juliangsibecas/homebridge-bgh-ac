@@ -21,7 +21,7 @@ export class AirConditionerAccessory {
 
   constructor(
     private readonly platform: AirConditionerPlatform,
-    private readonly accessory: PlatformAccessory<{ device: AirConditioner }>
+    private readonly accessory: PlatformAccessory<{ device: AirConditioner }>,
   ) {
     this.device = this.accessory.context.device;
 
@@ -30,11 +30,11 @@ export class AirConditionerAccessory {
       .setCharacteristic(this.platform.Characteristic.Manufacturer, 'BGH')
       .setCharacteristic(
         this.platform.Characteristic.Model,
-        this.accessory.context.device.model
+        this.accessory.context.device.model,
       )
       .setCharacteristic(
         this.platform.Characteristic.SerialNumber,
-        this.device.id.toString()
+        this.device.id.toString(),
       );
 
     this.lastState = this.device.state;
@@ -45,7 +45,7 @@ export class AirConditionerAccessory {
 
     this.service.setCharacteristic(
       this.platform.Characteristic.Name,
-      this.accessory.context.device.name
+      this.accessory.context.device.name,
     );
 
     this.service
@@ -68,7 +68,7 @@ export class AirConditionerAccessory {
 
     this.service
       .getCharacteristic(
-        this.platform.Characteristic.HeatingThresholdTemperature
+        this.platform.Characteristic.HeatingThresholdTemperature,
       )
       .setProps({
         minValue: this.accessory.context.device.params.temp.min,
@@ -80,7 +80,7 @@ export class AirConditionerAccessory {
 
     this.service
       .getCharacteristic(
-        this.platform.Characteristic.CoolingThresholdTemperature
+        this.platform.Characteristic.CoolingThresholdTemperature,
       )
       .setProps({
         minValue: this.accessory.context.device.params.temp.min,
@@ -143,7 +143,7 @@ export class AirConditionerAccessory {
     return parseAccessoryCurrentState(
       this.device.state.mode,
       this.device.state.currentTemp,
-      this.device.state.targetTemp
+      this.device.state.targetTemp,
     );
   }
 
